@@ -1,7 +1,7 @@
 pipeline { 
     agent any 
     tools {
-    java "java-11"
+    java "jdkjava11"
     }
     stages {
         stage('Build') { 
