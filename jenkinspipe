@@ -1,24 +1,19 @@
 pipeline { 
     agent any 
-    options {
-        skipStagesAfterUnstable()
+    tools {
+    java "java-11"
     }
     stages {
         stage('Build') { 
             steps { 
-                sh 'make' 
+                sh 'javac JavaExample.java'
             }
         }
         stage('Test'){
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml' 
+                sh 'java JavaExample'
+           
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'make publish'
-            }
-        }
-    }
-}
+   }
+ }
