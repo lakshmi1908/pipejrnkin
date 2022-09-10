@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'javac JavaExample.java'
-                sh 'java JavaExample'
+                bat 'javac JavaExample.java'
+                bat 'java JavaExample'
             
         }
     }}
