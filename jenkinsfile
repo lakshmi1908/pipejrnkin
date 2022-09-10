@@ -1,19 +1,14 @@
-pipeline { 
-    agent any 
+pipeline {
+    agent any
     tools {
-    jdk "java11"
-    }
+         jdk "java11"
+        }
     stages {
-        stage('Build') { 
-            steps { 
-                sh 'javac JavaExample.java'
-            }
-        }
-        stage('Test'){
+        stage('Build') {
             steps {
+                sh 'javac JavaExample.java'
                 sh 'java JavaExample'
-           
-            }
+            
         }
-   }
- }
+    }}
+}
