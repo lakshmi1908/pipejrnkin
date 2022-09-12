@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class JavaExample {
 
     public static void main(String[] args) {
-        String str="Sharafudeen";
+        String str="Lakshmi";
         String reversed = reverseString(str);
         System.out.println("The reversed string is: " + reversed);
     }
