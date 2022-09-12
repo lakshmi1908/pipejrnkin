@@ -8,7 +8,18 @@ pipeline {
             steps {
                 bat 'javac JavaExample.java'
                 bat 'java JavaExample'
-            
-        }
-    }}
-}
+               }
+         }
+         stage('Test') {
+            steps {
+                echo "Testing"
+                }
+           }
+         stage('Package') {
+             steps {
+                echo "Created Package"
+                }
+           }
+       }
+    }
+         
